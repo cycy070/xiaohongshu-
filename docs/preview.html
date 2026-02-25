@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MirrorSoul Preview</title>
+    <link rel="stylesheet" href="../src/styles/breathing-background.css" />
+    <style>
+      body { margin: 0; font-family: Inter, sans-serif; color: #4A4947; }
+      .wrap { min-height: 100svh; display: grid; place-items: center; position: relative; overflow: hidden; }
+      .card { width: min(92vw, 420px); text-align: center; }
+      h1 { font-family: 'Playfair Display', serif; letter-spacing: .04em; font-size: 42px; margin-bottom: 18px; }
+      input,button { width: 100%; border-radius: 16px; padding: 14px 16px; border: 1px solid rgba(74,73,71,.2); }
+      input { background: rgba(229,225,218,.5); margin-bottom: 10px; }
+      button { background: rgba(255,255,255,.4); }
+    </style>
+  </head>
+  <body>
+    <main class="wrap breathing-gradient noise-paper">
+      <div class="card">
+        <h1>镜像灵魂</h1>
+        <input placeholder="输入你的 Access Code"/>
+        <button>开启灵魂镜像</button>
+      </div>
+    </main>
+  </body>
+</html>

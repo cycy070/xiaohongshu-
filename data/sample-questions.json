@@ -1,0 +1,41 @@
+{
+  "dimensions": [
+    "spiritual_independence",
+    "emotional_resilience",
+    "social_intuition",
+    "aesthetic_sensitivity",
+    "subconscious_shadow"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "当关系出现沉默时，你更接近哪种状态？",
+      "options": [
+        {
+          "id": "q1_a",
+          "label": "先退回自我秩序，晚些再回应",
+          "questionWeight": 1.2,
+          "emotionalTone": "calm",
+          "minReadingTimeMs": 2200,
+          "tags": ["边界", "关系节律"],
+          "factors": [
+            { "dimension": "spiritual_independence", "weight": 0.45, "impact": "positive" },
+            { "dimension": "social_intuition", "weight": 0.25, "impact": "negative" }
+          ]
+        },
+        {
+          "id": "q1_b",
+          "label": "立刻解释，避免被误解",
+          "questionWeight": 1.0,
+          "emotionalTone": "anxious",
+          "minReadingTimeMs": 2200,
+          "tags": ["安全感", "沟通"],
+          "factors": [
+            { "dimension": "social_intuition", "weight": 0.35, "impact": "positive" },
+            { "dimension": "emotional_resilience", "weight": 0.30, "impact": "negative" }
+          ]
+        }
+      ]
+    }
+  ]
+}
