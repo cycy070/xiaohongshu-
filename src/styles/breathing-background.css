@@ -1,0 +1,65 @@
+:root {
+  --bg-a: #e5e1da;
+  --bg-b: #b3a394;
+  --bg-c: #4a4947;
+}
+
+.noise-paper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  mix-blend-mode: soft-light;
+  background-image: radial-gradient(rgba(74, 73, 71, 0.25) 0.5px, transparent 0.5px);
+  background-size: 2px 2px;
+}
+
+.breathing-gradient {
+  background: radial-gradient(80% 65% at 10% 20%, rgba(229, 225, 218, 0.95), transparent 70%),
+    radial-gradient(70% 60% at 90% 10%, rgba(179, 163, 148, 0.45), transparent 70%),
+    radial-gradient(75% 70% at 50% 85%, rgba(74, 73, 71, 0.18), transparent 75%),
+    linear-gradient(140deg, var(--bg-a), #dcd3c8 40%, var(--bg-b) 70%, var(--bg-c));
+  background-size: 140% 140%;
+  animation: breathFlow 16s ease-in-out infinite alternate;
+}
+
+@keyframes breathFlow {
+  0% {
+    background-position: 0% 45%, 80% 0%, 20% 100%, 0% 50%;
+    filter: saturate(95%) brightness(100%);
+  }
+  50% {
+    background-position: 40% 30%, 100% 20%, 60% 80%, 40% 50%;
+    filter: saturate(90%) brightness(102%);
+  }
+  100% {
+    background-position: 90% 60%, 40% 10%, 90% 60%, 100% 50%;
+    filter: saturate(88%) brightness(98%);
+  }
+}
+
+@keyframes ripplePulse {
+  0% {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.12);
+    opacity: 0;
+  }
+}
+
+@keyframes nebulaSpin {
+  0% {
+    transform: rotate(0deg) scale(0.96);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotate(360deg) scale(1.08);
+    opacity: 1;
+  }
+}
