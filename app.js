@@ -318,6 +318,10 @@ const resultStrength = document.querySelector("[data-result-strength]");
 const resultActions = document.querySelector("[data-result-actions]");
 const resultBadges = document.querySelector("[data-result-badges]");
 const dimensionGrid = document.querySelector("[data-dimension-grid]");
+const resultQuoteTitle = document.querySelector("[data-result-quote-title]");
+const resultQuoteBody = document.querySelector("[data-result-quote-body]");
+const resultShareTag = document.querySelector("[data-result-share-tag]");
+const resultTitleList = document.querySelector("[data-result-title-list]");
 const shareButton = document.querySelector("[data-share-card]");
 const shareOutput = document.querySelector("[data-share-output]");
 const redeemForm = document.querySelector("[data-redeem-form]");
@@ -432,6 +436,7 @@ function renderResult() {
   resultActions.innerHTML = "";
   resultBadges.innerHTML = "";
   dimensionGrid.innerHTML = "";
+  resultTitleList.innerHTML = "";
 
   [
     `当前阶段：${profile.name}`,
@@ -448,6 +453,17 @@ function renderResult() {
     const item = document.createElement("li");
     item.textContent = action;
     resultActions.appendChild(item);
+  });
+
+  const sharePack = createShareAssets(profile, strongest, weakest);
+  resultQuoteTitle.textContent = sharePack.quoteTitle;
+  resultQuoteBody.textContent = sharePack.quoteBody;
+  resultShareTag.textContent = sharePack.shareTag;
+
+  sharePack.titles.forEach((title) => {
+    const item = document.createElement("li");
+    item.textContent = title;
+    resultTitleList.appendChild(item);
   });
 
   Object.entries(scores).forEach(([key, value]) => {
@@ -479,6 +495,22 @@ function renderResult() {
     stage: profile.name,
     scores,
   });
+}
+
+function createShareAssets(profile, strongest, weakest) {
+  const strongestLabel = dimensions[strongest[0]];
+  const weakestLabel = dimensions[weakest[0]];
+
+  return {
+    quoteTitle: `${profile.name} | 你现在最需要的不是硬撑，而是更会照顾自己的恢复节奏。`,
+    quoteBody: `你最突出的部分是${strongestLabel}，这说明你并不是没有力量。真正拖住你的，更可能是${weakestLabel}这一环还没有被认真照顾。`,
+    shareTag: `分享关键词：${profile.name}`,
+    titles: [
+      `测完才知道，我的问题不是不会爱，是${weakestLabel}太弱`,
+      `原来我一直走不出来，不是矫情，是卡在了${profile.name}`,
+      `这份测试最戳我的一句话：我该先照顾自己，再处理关系`,
+    ],
+  };
 }
 
 function drawRadar(scores) {
