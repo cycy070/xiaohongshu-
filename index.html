@@ -6,7 +6,7 @@
     <title>愈见 | 情感复原力测试</title>
     <meta
       name="description"
-      content="20道场景题，测出你的情感复原力阶段，生成专属关系恢复画像、雷达图与7天行动建议。"
+      content="输入兑换码，完成20道场景题，查看你的情感复原力阶段、五维雷达图与7天行动建议。"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,337 +18,82 @@
   </head>
   <body>
     <div class="page-shell">
-      <header class="hero">
-        <nav class="topbar">
-          <div class="brand-lockup">
-            <span class="brand-mark">YJ</span>
-            <div>
-              <p class="brand-eyebrow">YUJIAN STUDIO</p>
-              <h1>愈见</h1>
-            </div>
+      <header class="topbar">
+        <div class="brand-lockup">
+          <span class="brand-mark">YJ</span>
+          <div>
+            <p class="brand-eyebrow">YUJIAN STUDIO</p>
+            <h1>愈见</h1>
           </div>
-          <button class="ghost-button" data-scroll="#redeem">兑换码入口</button>
-        </nav>
-
-        <section class="hero-grid">
-          <div class="hero-copy reveal">
-            <p class="section-tag">情感复原力评估工具</p>
-            <h2>不是你不会爱，是你还没看见自己的关系恢复方式。</h2>
-            <p class="hero-description">
-              用 20 道高代入感场景题，读懂你在关系受挫后的情绪恢复速度、边界感、支持系统与成长转化能力。
-            </p>
-            <div class="hero-actions">
-              <button class="primary-button" data-start-test>开始测试</button>
-              <button class="secondary-button" data-scroll="#product">查看产品说明</button>
-            </div>
-            <ul class="hero-points">
-              <li>3-5 分钟完成</li>
-              <li>5 维雷达图</li>
-              <li>阶段画像 + 7 天行动建议</li>
-            </ul>
-          </div>
-
-          <div class="hero-card reveal delay-1">
-            <div class="portrait-card">
-              <p class="mini-tag">本周热卖</p>
-              <h3>关系复原力完整版</h3>
-              <p class="price">￥19.9</p>
-              <div class="metric-grid">
-                <article>
-                  <span>20</span>
-                  <p>场景问题</p>
-                </article>
-                <article>
-                  <span>5</span>
-                  <p>核心维度</p>
-                </article>
-                <article>
-                  <span>7</span>
-                  <p>天练习卡</p>
-                </article>
-                <article>
-                  <span>1</span>
-                  <p>次完整报告</p>
-                </article>
-              </div>
-              <div class="sample-quote">
-                <p>“你不是太敏感，而是长期在关系里先照顾别人，最后才照顾自己。”</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
+        <button class="ghost-button" data-scroll="#redeem">输入兑换码</button>
       </header>
 
       <main>
-        <section class="section reveal" id="product">
-          <div class="section-heading">
-            <p class="section-tag">产品概览</p>
-            <h2>把虚拟测试做成一个可售卖、可分享、可复购的成长产品。</h2>
+        <section class="hero">
+          <div class="hero-card reveal">
+            <p class="section-tag">已购买后使用</p>
+            <h2>输入兑换码，开始你的情感复原力测试。</h2>
+            <p class="hero-description">
+              这是一份给已经下单用户使用的测试工具。共 20 道场景题，约 3-5 分钟完成，测完即可查看完整结果。
+            </p>
+            <div class="hero-actions">
+              <button class="primary-button" data-scroll="#redeem">立即输入兑换码</button>
+              <button class="secondary-button" data-start-test>直接开始 Demo</button>
+            </div>
+            <ul class="hero-points">
+              <li>20 道场景题</li>
+              <li>5 维雷达图</li>
+              <li>阶段画像 + 行动建议</li>
+            </ul>
           </div>
-          <div class="feature-panels">
-            <article class="panel soft">
-              <h3>你会收到什么</h3>
-              <ul>
-                <li>情感复原力 20 题完整版测评</li>
-                <li>五维雷达图与阶段判断</li>
-                <li>关系反应模式解读</li>
-                <li>3 条个性化行动建议</li>
-                <li>7 天微练习手册文案</li>
+        </section>
+
+        <section class="section redeem-section reveal" id="redeem">
+          <div class="section-heading compact">
+            <p class="section-tag">兑换码入口</p>
+            <h3>先验证兑换码，再开始测试。</h3>
+            <p>如果你是从小红书下单后打开这个页面，直接把收到的兑换码填在下面就可以。</p>
+          </div>
+          <div class="redeem-layout">
+            <article class="redeem-card">
+              <form data-redeem-form>
+                <label for="redeemCode">输入兑换码</label>
+                <input id="redeemCode" name="redeemCode" placeholder="例如 YJ-2026-8888" />
+                <button class="primary-button" type="submit">验证并开始</button>
+              </form>
+              <p class="redeem-feedback" data-redeem-feedback></p>
+            </article>
+
+            <article class="delivery-card">
+              <p class="mini-tag">使用说明</p>
+              <h3>手机上这样用最顺</h3>
+              <ul class="helper-list">
+                <li>复制链接到浏览器打开，不要直接在聊天窗口内使用。</li>
+                <li>输入兑换码后，完成 20 道题即可查看结果。</li>
+                <li>建议按最近一段时间的真实状态作答。</li>
               </ul>
-            </article>
-            <article class="panel warm">
-              <h3>适合谁</h3>
-              <ul>
-                <li>总在关系结束后反复自责的人</li>
-                <li>知道不舒服却很难立边界的人</li>
-                <li>想读懂自己情绪恢复节奏的人</li>
-                <li>想把一次受伤变成下一次选择能力的人</li>
-              </ul>
-            </article>
-            <article class="panel pale">
-              <h3>温馨提示</h3>
-              <p>
-                本产品用于自我觉察与成长参考，不替代医疗、诊断或心理治疗服务。如你正处于明显心理危机，请优先联系正规医疗机构或专业服务资源。
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="section-tag">为什么会下单</p>
-            <h2>用户购买的不是一份“标签”，而是一个能解释当下困境的答案。</h2>
-          </div>
-          <div class="value-grid">
-            <article class="value-card">
-              <p class="mini-tag">高共鸣</p>
-              <h3>问题很具体</h3>
-              <p>不是泛泛测性格，而是聚焦“关系结束后为什么总是卡住”“为什么知道不舒服却还是退让”。</p>
-            </article>
-            <article class="value-card">
-              <p class="mini-tag">高截图感</p>
-              <h3>结果值得分享</h3>
-              <p>阶段名称、雷达图、金句分析和行动建议都适合截图发笔记、评论区或私域群，天然带传播属性。</p>
-            </article>
-            <article class="value-card">
-              <p class="mini-tag">高复购</p>
-              <h3>可以延伸成系列</h3>
-              <p>恋爱复原力、边界感、依恋模式、分手恢复节奏都能沿用同一套品牌与交付方式继续售卖。</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="section-tag">适合你的时刻</p>
-            <h2>这不是“什么时候都能测一测”的娱乐页，而是用户在情绪节点上真的会想买的产品。</h2>
-          </div>
-          <div class="scene-grid">
-            <article class="scene-card">
-              <span>01</span>
-              <h3>刚分开，脑子停不下来</h3>
-              <p>用户最需要的不是再听一句“你会好的”，而是搞清楚自己为什么会一直卡在反复回想和自责里。</p>
-            </article>
-            <article class="scene-card">
-              <span>02</span>
-              <h3>知道关系不舒服，却总下不了决心</h3>
-              <p>这类用户最容易为“边界感”“关系模式”买单，因为她们已经隐约知道问题存在，只差一个更清楚的解释。</p>
-            </article>
-            <article class="scene-card">
-              <span>03</span>
-              <h3>明明很努力，却总重复同一种关系</h3>
-              <p>这时测试的价值不在于命名，而在于帮她看到：到底是哪一个维度总在拉她回到旧模式。</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section showcase reveal">
-          <div class="section-heading">
-            <p class="section-tag">结果样例</p>
-            <h2>先让用户看见“测完能得到什么”，成交会轻松很多。</h2>
-          </div>
-          <div class="showcase-grid">
-            <article class="report-sample gradient-a">
-              <p class="mini-tag">结果卡片</p>
-              <h3>觉察启动期</h3>
-              <p class="sample-title">你已经开始看见自己在关系中的旧模式，也正在形成新的恢复习惯。</p>
-              <ul class="sample-list">
-                <li>最高维度：成长转化能力</li>
-                <li>待提升维度：支持系统调用力</li>
-                <li>关键词：自省、回拉、边界练习</li>
-              </ul>
-            </article>
-            <article class="report-sample gradient-b">
-              <p class="mini-tag">分析文案</p>
-              <h3>最戳人的一句话</h3>
-              <blockquote>
-                你不是走不出来，而是每次难过时都先处理别人的感受，最后才轮到自己。
-              </blockquote>
-              <p>这种表达就是未来详情页、笔记截图和评论区共鸣的核心素材。</p>
-            </article>
-            <article class="report-sample gradient-c">
-              <p class="mini-tag">行动建议</p>
-              <h3>7 天微练习</h3>
-              <ol class="sample-list ordered">
-                <li>暂停查看触发你情绪的人 72 小时</li>
-                <li>记录“事件-感受-需要”，不急着评价自己</li>
-                <li>写下 3 条以后不再退让的关系底线</li>
-              </ol>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="section-tag">购买内容</p>
-            <h2>把用户收到的每一项内容讲清楚，才像一个真的商品。</h2>
-          </div>
-          <div class="deliverables">
-            <article class="deliverable-card">
-              <span>01</span>
-              <h3>完整版测试</h3>
-              <p>20 道场景题，测试时长约 3-5 分钟，直觉作答更准。</p>
-            </article>
-            <article class="deliverable-card">
-              <span>02</span>
-              <h3>结果报告</h3>
-              <p>包含阶段名称、五维得分、关系模式画像、优势分析与后续建议。</p>
-            </article>
-            <article class="deliverable-card">
-              <span>03</span>
-              <h3>练习手册</h3>
-              <p>7 天微练习文案，帮助用户把“被看见”进一步变成“能改变”。</p>
-            </article>
-            <article class="deliverable-card">
-              <span>04</span>
-              <h3>分享素材</h3>
-              <p>结果卡与分享文案可直接用于小红书截图、朋友圈或私域群传播。</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="section-tag">为什么值 19.9</p>
-            <h2>用户不是在为“20 道题”付款，而是在为一句更清楚的解释和下一步动作买单。</h2>
-          </div>
-          <div class="worth-grid">
-            <article class="worth-card">
-              <p class="mini-tag">不是免费鸡汤</p>
-              <h3>它会告诉用户卡在哪里</h3>
-              <p>免费内容能陪伴情绪，但很难具体说清楚：到底是边界感、归因方式，还是支持系统在让关系反复失控。</p>
-            </article>
-            <article class="worth-card">
-              <p class="mini-tag">不是泛泛安慰</p>
-              <h3>它会给出一条可以马上做的事</h3>
-              <p>用户买完最容易给好评的瞬间，不是“说得真准”，而是“我终于知道今天该先做什么”。</p>
-            </article>
-            <article class="worth-card">
-              <p class="mini-tag">不是一次性内容</p>
-              <h3>它能承接后续复购</h3>
-              <p>完整报告、7 天微练习、复测版本和系列测试都能往后接，前端成交不只是这一单，而是一条成长产品线的入口。</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="section-tag">报告拆解</p>
-            <h2>真正让用户觉得“值”的，不只是测完，而是报告里每一块都在回应她的问题。</h2>
-          </div>
-          <div class="report-breakdown">
-            <article class="breakdown-card">
-              <p class="mini-tag">模块一</p>
-              <h3>阶段判断</h3>
-              <p>先给用户一个可理解的当前位置，比如“敏感防御期”或“稳定重建期”，让她立刻知道自己现在大概处在哪个恢复阶段。</p>
-            </article>
-            <article class="breakdown-card">
-              <p class="mini-tag">模块二</p>
-              <h3>五维雷达图</h3>
-              <p>不是只说“你很好/你不好”，而是告诉她到底是情绪恢复、边界感还是支持系统在拖后腿。</p>
-            </article>
-            <article class="breakdown-card">
-              <p class="mini-tag">模块三</p>
-              <h3>关系模式画像</h3>
-              <p>这一段负责把用户心里模糊的感觉说清楚，例如“先自责再退让”“表面冷静但实际内耗很重”。</p>
-            </article>
-            <article class="breakdown-card">
-              <p class="mini-tag">模块四</p>
-              <h3>7 天行动建议</h3>
-              <p>真正决定复购和好评的，往往是这里。用户需要的是下一步怎么做，而不是只被温柔地命名。</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section aesthetic reveal">
-          <div class="section-heading">
-            <p class="section-tag">品牌气质</p>
-            <h2>视觉方向更像一本可收藏的关系成长手册，而不是廉价测试页。</h2>
-          </div>
-          <div class="moodboard">
-            <article>
-              <span>01</span>
-              <h3>暖灰玫瑰色调</h3>
-              <p>降低廉价感，保留温柔与自洽的情绪氛围，贴近小红书女性用户对“高级感”的预期。</p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>杂志化排版</h3>
-              <p>标题使用高对比衬线字体，正文保留可读性，兼顾质感与截图传播性。</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>可分享结果卡</h3>
-              <p>结果页以卡片式结构呈现，后续可以直接扩展为分享图、海报或私域引流素材。</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="section-tag">使用流程</p>
-            <h2>把体验路径说得足够顺，用户才不会在下单后流失。</h2>
-          </div>
-          <div class="timeline">
-            <article class="timeline-step">
-              <span>STEP 1</span>
-              <h3>店铺下单</h3>
-              <p>用户在小红书购买后，自动收到测试入口、兑换码与使用说明。</p>
-            </article>
-            <article class="timeline-step">
-              <span>STEP 2</span>
-              <h3>输入兑换码</h3>
-              <p>通过网页输入兑换码即可进入测试，减少客服沟通成本。</p>
-            </article>
-            <article class="timeline-step">
-              <span>STEP 3</span>
-              <h3>完成测试</h3>
-              <p>3-5 分钟完成 20 题，立即生成基础报告，后续可扩展深度版。</p>
-            </article>
-            <article class="timeline-step">
-              <span>STEP 4</span>
-              <h3>领取加赠</h3>
-              <p>引导用户带图评价或分享体验，领取练习手册或下一款测试优惠。</p>
+              <p class="helper-note">如果兑换异常或页面打不开，直接联系小红书店铺客服处理即可。</p>
             </article>
           </div>
         </section>
 
         <section class="section quiz-section reveal" id="quiz">
-          <div class="section-heading">
-            <p class="section-tag">在线测评</p>
-            <h2>现在就做一版 Demo，先把产品手感跑起来。</h2>
+          <div class="section-heading compact">
+            <p class="section-tag">在线测试</p>
+            <h3>没有标准答案，选最接近你最近状态的一项就好。</h3>
           </div>
 
           <div class="quiz-shell" data-quiz-shell>
             <div class="quiz-intro" data-quiz-intro>
               <div class="intro-card">
-                <h3>测试说明</h3>
+                <h3>开始前提醒</h3>
                 <ul>
-                  <li>共 20 题，每题请选择最贴近你真实习惯的一项。</li>
-                  <li>没有标准答案，直觉作答会更准确。</li>
-                  <li>完成后会生成一份可视化报告 Demo。</li>
+                  <li>共 20 题，预计 3-5 分钟完成。</li>
+                  <li>建议直觉作答，不需要反复推敲。</li>
+                  <li>完成后会生成一份阶段结果与行动建议。</li>
                 </ul>
-                <button class="primary-button" data-start-test>进入测试</button>
+                <button class="primary-button" data-start-test>开始测试</button>
               </div>
             </div>
 
@@ -377,6 +122,7 @@
                 <p class="result-tagline" data-result-tagline></p>
                 <p data-result-summary></p>
               </div>
+
               <div class="result-hero-card">
                 <div>
                   <p class="mini-tag">结果金句</p>
@@ -385,10 +131,12 @@
                 </div>
                 <div class="result-hero-meta">
                   <span data-result-share-tag></span>
-                  <span>适合截图分享</span>
+                  <span>适合截图保存</span>
                 </div>
               </div>
+
               <div class="result-badges" data-result-badges></div>
+
               <div class="result-grid">
                 <section class="result-panel radar-panel">
                   <h4>五维得分</h4>
@@ -415,18 +163,20 @@
                   <ol data-result-actions></ol>
                 </section>
                 <section class="result-panel full">
-                  <h4>适合发在小红书的标题方向</h4>
+                  <h4>如果你想分享</h4>
                   <ul class="result-title-list" data-result-title-list></ul>
                 </section>
               </div>
-              <div class="upsell-banner">
+
+              <div class="support-banner">
                 <div>
-                  <p class="mini-tag">下一步</p>
-                  <h4>想继续做深一点，可以解锁 7 天微练习手册与复测版本。</h4>
-                  <p>这一层内容更适合做加购或好评赠送，也能顺势承接下一款系列测试。</p>
+                  <p class="mini-tag">完成后</p>
+                  <h4>如果兑换或页面有问题，直接联系店铺客服处理就可以。</h4>
+                  <p>这份测试用于自我觉察与成长参考，不替代医疗、诊断或治疗服务。</p>
                 </div>
-                <button class="secondary-button" data-scroll="#redeem">查看兑换模式</button>
+                <button class="secondary-button" data-scroll="#support">查看帮助</button>
               </div>
+
               <div class="result-actions">
                 <button class="primary-button" data-share-card>生成分享文案</button>
                 <button class="secondary-button" data-reset>再测一次</button>
@@ -436,162 +186,36 @@
           </div>
         </section>
 
-        <section class="section redeem-section reveal" id="redeem">
-          <div class="section-heading">
-            <p class="section-tag">交付模式 Demo</p>
-            <h2>按你想复制的小红书售卖方式，把“链接 + 兑换码 + 使用说明”也一起做出来。</h2>
-          </div>
-          <div class="redeem-layout">
-            <article class="redeem-card">
-              <h3>兑换码入口</h3>
-              <p>用户下单后收到兑换码，在这里输入即可解锁完整版测试。</p>
-              <form data-redeem-form>
-                <label for="redeemCode">输入兑换码</label>
-                <input id="redeemCode" name="redeemCode" placeholder="例如 YJ-2026-8888" />
-                <button class="primary-button" type="submit">验证并开始</button>
-              </form>
-              <p class="redeem-feedback" data-redeem-feedback></p>
-            </article>
-
-            <article class="delivery-card">
-              <p class="mini-tag">模拟发货文案</p>
-              <h3>下单后可自动发送这段内容</h3>
-              <div class="delivery-template" data-delivery-template></div>
-              <button class="ghost-button" data-copy-delivery>复制发货文案</button>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal">
-          <div class="section-heading">
+        <section class="section reveal" id="support">
+          <div class="section-heading compact">
             <p class="section-tag">常见问题</p>
-            <h2>把售前疑问提前回答掉，用户下单时会安心很多。</h2>
+            <h3>这里保留最必要的说明，不再让你读太多。</h3>
           </div>
           <div class="faq-grid">
             <article class="faq-card">
-              <h3>测试适合哪些人？</h3>
-              <p>适合正处于分手恢复期、关系反复期、自我成长阶段，想看懂自己关系模式的用户。</p>
+              <h4>兑换码无效怎么办？</h4>
+              <p>先检查有没有空格或输错。如果还是不行，直接联系店铺客服补发处理。</p>
             </article>
             <article class="faq-card">
-              <h3>测试结果是否等于诊断？</h3>
-              <p>不是。它是自我觉察工具，用于帮助用户识别关系恢复方式，不替代诊断或治疗。</p>
+              <h4>测试结果是不是诊断？</h4>
+              <p>不是，它是帮助你看清关系恢复方式的成长工具，用于参考和自我觉察。</p>
             </article>
             <article class="faq-card">
-              <h3>为什么要设置兑换码？</h3>
-              <p>兑换码方便和小红书商品绑定，也能控制使用次数、售后补发和后续系列产品升级。</p>
+              <h4>手机上怎么用最顺？</h4>
+              <p>建议复制链接到浏览器打开，再输入兑换码开始测试，体验会更稳定。</p>
             </article>
             <article class="faq-card">
-              <h3>后续还能卖什么？</h3>
-              <p>这套品牌结构后续可以继续接边界感测试、依恋模式测试、分手恢复节奏测试等系列 SKU。</p>
+              <h4>测完后还能做什么？</h4>
+              <p>你可以先保存结果截图，按结果页建议行动；需要后续版本时再由店铺承接，不在这里二次付费。</p>
             </article>
-          </div>
-        </section>
-
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="section-tag">用户感受</p>
-            <h2>评价不一定要真实上线后再补，预览阶段就该知道它会传递什么氛围。</h2>
-          </div>
-          <div class="testimonial-grid">
-            <article class="testimonial-card">
-              <p class="testimonial-tag">@梨子想稳定一点</p>
-              <h3>“终于不是一句你要爱自己就结束了。”</h3>
-              <p>我以前做很多测试都像被贴标签，这个更像有人把我在关系里的反应慢慢解释给我听。</p>
-            </article>
-            <article class="testimonial-card featured">
-              <p class="testimonial-tag">@晚一点也没关系</p>
-              <h3>“最有价值的是，它告诉我下一步怎么做。”</h3>
-              <p>结果不是吓唬人的那种，而是会给出很具体的动作。我最喜欢 7 天微练习这个设计，感觉像被轻轻接住了。</p>
-            </article>
-            <article class="testimonial-card">
-              <p class="testimonial-tag">@枝枝不熬夜</p>
-              <h3>“截图发给朋友，她说这比我自己讲还清楚。”</h3>
-              <p>雷达图和结果卡很适合分享，朋友一眼就看懂我现在卡在哪，也不会觉得太沉重。</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="section-tag">下单理由</p>
-            <h2>如果今天就挂进小红书店铺，详情页最该打动用户的其实是这 4 句。</h2>
-          </div>
-          <div class="reason-grid">
-            <article class="reason-card">
-              <span>01</span>
-              <p>不是测你有没有问题，而是帮你看清自己在关系受挫后的恢复方式。</p>
-            </article>
-            <article class="reason-card">
-              <span>02</span>
-              <p>不是只给一个标签，而是把“卡在哪里”和“现在先做什么”一起告诉你。</p>
-            </article>
-            <article class="reason-card">
-              <span>03</span>
-              <p>不是只有好看截图，而是真正能承接 7 天微练习、复测和后续系列产品。</p>
-            </article>
-            <article class="reason-card">
-              <span>04</span>
-              <p>不是把情绪说得更重，而是帮你把复杂的关系感受整理成能行动的答案。</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="section-tag">商品包装</p>
-            <h2>如果今天就要上店铺，这一页应该承担起“让人敢下单”的职责。</h2>
-          </div>
-          <div class="package-grid">
-            <article class="package-card">
-              <p class="mini-tag">引流款</p>
-              <h3>快速版</h3>
-              <p class="package-price">￥9.9</p>
-              <ul>
-                <li>8 道轻量题</li>
-                <li>阶段判断</li>
-                <li>1 条核心建议</li>
-              </ul>
-            </article>
-            <article class="package-card featured">
-              <p class="mini-tag">主推款</p>
-              <h3>完整版</h3>
-              <p class="package-price">￥19.9</p>
-              <ul>
-                <li>20 道完整版题目</li>
-                <li>五维雷达图</li>
-                <li>关系模式解读</li>
-                <li>3 条行动建议</li>
-              </ul>
-            </article>
-            <article class="package-card">
-              <p class="mini-tag">提升款</p>
-              <h3>进阶版</h3>
-              <p class="package-price">￥29.9</p>
-              <ul>
-                <li>完整版测试</li>
-                <li>7 天微练习手册</li>
-                <li>1 次复测资格</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section class="section cta-section reveal">
-          <div class="cta-panel">
-            <div>
-              <p class="section-tag">最后收口</p>
-              <h2>把它继续打磨下去，这页就不只是 Demo，而是能真正拿去卖的产品页。</h2>
-              <p>
-                当前版本已经有品牌包装、测试流程、结果报告和兑换码入口。下一步会继续朝正式商品形态推进，包括更细的结果文案、分享卡片和店铺交付物料。
-              </p>
-            </div>
-            <div class="cta-actions">
-              <button class="primary-button" data-start-test>立即体验测试</button>
-              <button class="secondary-button" data-scroll="#redeem">查看交付模式</button>
-            </div>
           </div>
         </section>
       </main>
+
+      <div class="mobile-action-bar">
+        <button class="secondary-button" data-scroll="#redeem">输入兑换码</button>
+        <button class="primary-button" data-start-test>开始测试</button>
+      </div>
     </div>
 
     <script src="./app.js"></script>

@@ -658,6 +658,10 @@ function resetQuiz() {
 }
 
 function fillDeliveryTemplate() {
+  if (!deliveryTemplate) {
+    return;
+  }
+
   deliveryTemplate.textContent = `宝，你的「愈见 · 情感复原力测试」兑换信息如下：
 
 测试入口：
@@ -767,7 +771,7 @@ redeemForm.addEventListener("submit", async (event) => {
         remainingUses: 4,
         maxUses: 5,
       };
-      redeemFeedback.textContent = "当前是本地直开模式，已用 Demo 逻辑为你解锁测试。";
+      redeemFeedback.textContent = "兑换成功，当前已解锁测试，你可以直接开始。";
       startQuiz();
     } else {
       redeemFeedback.textContent = "本地直开模式下仅内置演示兑换码：YJ-2026-8888";
@@ -779,24 +783,26 @@ redeemForm.addEventListener("submit", async (event) => {
     const checked = await verifyRedeemCode(code);
     const consumed = await consumeRedeemCode(code);
     activeRedeem = consumed;
-    redeemFeedback.textContent = `兑换成功，当前为${checked.plan}，剩余可用 ${consumed.remainingUses} 次。`;
+    redeemFeedback.textContent = `兑换成功，已开始当前测试，剩余可用 ${consumed.remainingUses} 次。`;
     startQuiz();
   } catch (error) {
     redeemFeedback.textContent = error.message || "兑换失败，请稍后重试。";
   }
 });
 
-copyDeliveryButton.addEventListener("click", async () => {
-  try {
-    await navigator.clipboard.writeText(deliveryTemplate.textContent);
-    copyDeliveryButton.textContent = "已复制";
-    window.setTimeout(() => {
-      copyDeliveryButton.textContent = "复制发货文案";
-    }, 1800);
-  } catch {
-    copyDeliveryButton.textContent = "复制失败，请手动复制";
-  }
-});
+if (copyDeliveryButton && deliveryTemplate) {
+  copyDeliveryButton.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(deliveryTemplate.textContent);
+      copyDeliveryButton.textContent = "已复制";
+      window.setTimeout(() => {
+        copyDeliveryButton.textContent = "复制发货文案";
+      }, 1800);
+    } catch {
+      copyDeliveryButton.textContent = "复制失败，请手动复制";
+    }
+  });
+}
 
 document.querySelectorAll("[data-scroll]").forEach((button) => {
   button.addEventListener("click", () => {
