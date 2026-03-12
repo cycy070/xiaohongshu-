@@ -305,6 +305,7 @@ const state = {
 };
 
 const quizIntro = document.querySelector("[data-quiz-intro]");
+const quizSection = document.querySelector("[data-quiz-section]");
 const quizCard = document.querySelector("[data-quiz-card]");
 const resultCard = document.querySelector("[data-result-card]");
 const progressText = document.querySelector("[data-progress-text]");
@@ -339,6 +340,10 @@ const copyDeliveryButton = document.querySelector("[data-copy-delivery]");
 const demoCode = "YJ-2026-8888";
 
 let activeRedeem = null;
+
+function unlockQuiz() {
+  quizSection?.classList.remove("hidden");
+}
 
 function renderQuestion() {
   const question = questions[state.currentQuestionIndex];
@@ -641,6 +646,13 @@ ${profile.summary}
 }
 
 function startQuiz() {
+  if (!activeRedeem) {
+    redeemFeedback.textContent = "请先输入兑换码，验证成功后才可以开始测试。";
+    document.querySelector("#redeem")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
+
+  unlockQuiz();
   quizIntro.classList.add("hidden");
   resultCard.classList.add("hidden");
   quizCard.classList.remove("hidden");
@@ -655,6 +667,7 @@ function resetQuiz() {
   quizCard.classList.add("hidden");
   resultCard.classList.add("hidden");
   shareOutput.classList.add("hidden");
+  unlockQuiz();
 }
 
 function fillDeliveryTemplate() {
@@ -772,6 +785,7 @@ redeemForm.addEventListener("submit", async (event) => {
         maxUses: 5,
       };
       redeemFeedback.textContent = "兑换成功，当前已解锁测试，你可以直接开始。";
+      unlockQuiz();
       startQuiz();
     } else {
       redeemFeedback.textContent = "本地直开模式下仅内置演示兑换码：YJ-2026-8888";
@@ -784,6 +798,7 @@ redeemForm.addEventListener("submit", async (event) => {
     const consumed = await consumeRedeemCode(code);
     activeRedeem = consumed;
     redeemFeedback.textContent = `兑换成功，已开始当前测试，剩余可用 ${consumed.remainingUses} 次。`;
+    unlockQuiz();
     startQuiz();
   } catch (error) {
     redeemFeedback.textContent = error.message || "兑换失败，请稍后重试。";

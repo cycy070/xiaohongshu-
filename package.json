@@ -5,6 +5,7 @@
   "description": "愈见 · 情感复原力测试 MVP",
   "scripts": {
     "dev": "node server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "codes:generate": "node scripts/generate-codes.js"
   }
 }

@@ -29,6 +29,20 @@ npm run dev
 - `YJ-2026-8888`
 - `YJ-2026-9999`
 
+## 批量生成兑换码
+
+默认生成 10 个完整版兑换码：
+
+```bash
+npm run codes:generate
+```
+
+自定义数量、套餐和次数：
+
+```bash
+node scripts/generate-codes.js --count=50 --plan=完整版 --uses=5
+```
+
 ## 当前后端能力
 
 ### 兑换码校验
