@@ -235,6 +235,7 @@ const stageProfiles = [
   {
     max: 34,
     name: "敏感防御期",
+    tagline: "你不是不在乎关系，而是太容易先受伤、再自我保护。",
     summary: "你对关系中的风吹草动非常敏感，受挫后容易陷入自责或回避，更需要先把安全感拉回自己身上。",
     pattern: "你可能习惯先猜测自己哪里不够好，再决定要不要表达感受。关系一有波动，内心就会迅速启动防御。",
     strength: "你的敏锐度很高，能很快察觉关系中的细微变化。这份敏感如果被好好照顾，会成为很珍贵的直觉。",
@@ -247,6 +248,7 @@ const stageProfiles = [
   {
     max: 48,
     name: "情绪淤积期",
+    tagline: "你已经在觉察问题，只是很多情绪还堆在心里没有出口。",
     summary: "你已经开始意识到关系问题，但情绪常常堆积在心里，知道该调整，却还没找到稳定的方法。",
     pattern: "你能察觉到不舒服，却常常在表达和忍耐之间摇摆。很多情绪被你留在心里，最后变成反复内耗。",
     strength: "你并不是没有力量，而是正在形成自己的节奏。一旦找到适合的恢复方式，会进步得很快。",
@@ -259,6 +261,7 @@ const stageProfiles = [
   {
     max: 62,
     name: "觉察启动期",
+    tagline: "你正在从“反复受伤”走向“看懂自己并开始改写模式”。",
     summary: "你已经能看见自己在关系中的惯性反应，也愿意开始调整，正处在从“看见问题”到“形成新习惯”的阶段。",
     pattern: "你开始分得清哪些情绪来自自己，哪些问题来自关系不匹配。虽然偶尔还是会被旧模式拉回去，但已不再完全失控。",
     strength: "你有很强的自我反思能力，也愿意为成长付出行动，这是建立稳定复原力的关键底座。",
@@ -271,6 +274,7 @@ const stageProfiles = [
   {
     max: 72,
     name: "稳定重建期",
+    tagline: "你已经不是靠硬撑在恢复，而是在慢慢建立稳定的关系底盘。",
     summary: "你已经建立了较好的恢复节奏，能处理大部分关系波动，也开始更坚定地守住自己的边界和价值感。",
     pattern: "你通常不会把所有问题都背在自己身上，能在情绪和理性之间找到平衡，也知道怎样重新把自己安顿好。",
     strength: "你的稳定感和反思能力都在线，这会让你在关系中更少被消耗，也更容易筛选出真正合适的人。",
@@ -283,6 +287,7 @@ const stageProfiles = [
   {
     max: Infinity,
     name: "高复原力期",
+    tagline: "你已经能把经历变成力量，而不是继续被旧伤定义。",
     summary: "你已经具备较成熟的关系恢复能力，能快速识别问题、照顾情绪、守住边界，并把经历转化为更清晰的选择。",
     pattern: "你通常能把关系中的波动视为信息，而不是对自我价值的审判。你知道如何修复自己，也知道什么时候该离开不合适的关系。",
     strength: "你最大的优势是稳定而清醒，这会让你在关系里更自由，也更有能力建立真正相互尊重的连接。",
@@ -312,6 +317,7 @@ const resetButtons = document.querySelectorAll("[data-reset]");
 const startButtons = document.querySelectorAll("[data-start-test]");
 const radarCanvas = document.querySelector("[data-radar-canvas]");
 const resultStage = document.querySelector("[data-result-stage]");
+const resultTagline = document.querySelector("[data-result-tagline]");
 const resultSummary = document.querySelector("[data-result-summary]");
 const resultPattern = document.querySelector("[data-result-pattern]");
 const resultStrength = document.querySelector("[data-result-strength]");
@@ -432,6 +438,7 @@ function renderResult() {
   resultCard.classList.remove("hidden");
 
   resultStage.textContent = `${profile.name} | 总分 ${total} / 80`;
+  resultTagline.textContent = profile.tagline;
   resultSummary.textContent = profile.summary;
   resultPattern.textContent = profile.pattern;
   resultStrength.textContent = profile.strength;

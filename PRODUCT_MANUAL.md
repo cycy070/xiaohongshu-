@@ -220,3 +220,9 @@
 - 增加 PDF 下载
 - 新增系列测试 SKU
 - 适配小红书详情页图片素材输出
+
+## 13. 配套物料
+
+- 店铺成交物料、自动发货文案、客服话术、详情页分屏文案见 [STORE_MATERIALS.md](D:/360MoveData/Users/admin1/Documents/New%20project/STORE_MATERIALS.md)
+- 交付链路、补发规则、售后处理和客服 SOP 见 [DELIVERY_SOP.md](D:/360MoveData/Users/admin1/Documents/New%20project/DELIVERY_SOP.md)
+- 当前阶段完成度、未完成项和统一推送建议见 [PHASE_CHECKLIST.md](D:/360MoveData/Users/admin1/Documents/New%20project/PHASE_CHECKLIST.md)

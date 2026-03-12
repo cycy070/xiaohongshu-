@@ -280,11 +280,13 @@ p {
 .redeem-layout,
 .result-grid,
 .value-grid,
+.worth-grid,
 .showcase-grid,
 .deliverables,
 .timeline,
 .faq-grid,
 .testimonial-grid,
+.reason-grid,
 .package-grid,
 .dimension-grid,
 .scene-grid,
@@ -334,12 +336,19 @@ p {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.worth-grid,
+.reason-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .value-card,
+.worth-card,
 .deliverable-card,
 .timeline-step,
 .faq-card,
 .scene-card,
-.breakdown-card {
+.breakdown-card,
+.reason-card {
   border-radius: 26px;
   padding: 26px;
   background: rgba(255, 250, 246, 0.82);
@@ -348,12 +357,25 @@ p {
 }
 
 .value-card h3,
+.worth-card h3,
 .deliverable-card h3,
 .timeline-step h3,
 .faq-card h3,
 .scene-card h3,
-.breakdown-card h3 {
+.breakdown-card h3,
+.reason-card h3 {
   margin-top: 10px;
+}
+
+.reason-card span {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(191, 125, 104, 0.12);
+  color: var(--accent-deep);
 }
 
 .scene-grid {
@@ -645,6 +667,12 @@ blockquote {
   border: 1px solid rgba(191, 125, 104, 0.18);
 }
 
+.result-tagline {
+  margin: 10px 0 0;
+  color: var(--accent-deep);
+  font-size: 1.05rem;
+}
+
 .result-hero-card h4 {
   margin-top: 8px;
   font-size: 1.5rem;
@@ -837,11 +865,13 @@ input {
   .result-grid,
   .result-hero-card,
   .value-grid,
+  .worth-grid,
   .showcase-grid,
   .deliverables,
   .timeline,
   .faq-grid,
   .testimonial-grid,
+  .reason-grid,
   .package-grid,
   .dimension-grid,
   .scene-grid,
