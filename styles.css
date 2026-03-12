@@ -682,6 +682,15 @@ blockquote {
   padding-left: 20px;
 }
 
+.result-next-step {
+  margin-bottom: 0;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(191, 125, 104, 0.08);
+  border: 1px solid rgba(191, 125, 104, 0.14);
+  color: var(--accent-deep);
+}
+
 .result-title-list {
   margin: 0;
   padding-left: 20px;

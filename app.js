@@ -315,6 +315,8 @@ const resultStage = document.querySelector("[data-result-stage]");
 const resultSummary = document.querySelector("[data-result-summary]");
 const resultPattern = document.querySelector("[data-result-pattern]");
 const resultStrength = document.querySelector("[data-result-strength]");
+const resultBlindspot = document.querySelector("[data-result-blindspot]");
+const resultNextStep = document.querySelector("[data-result-next-step]");
 const resultActions = document.querySelector("[data-result-actions]");
 const resultBadges = document.querySelector("[data-result-badges]");
 const dimensionGrid = document.querySelector("[data-dimension-grid]");
@@ -433,6 +435,9 @@ function renderResult() {
   resultSummary.textContent = profile.summary;
   resultPattern.textContent = profile.pattern;
   resultStrength.textContent = profile.strength;
+  const narrative = getResultNarrative(profile, strongest, weakest);
+  resultBlindspot.textContent = narrative.blindspot;
+  resultNextStep.textContent = narrative.nextStep;
   resultActions.innerHTML = "";
   resultBadges.innerHTML = "";
   dimensionGrid.innerHTML = "";
@@ -510,6 +515,32 @@ function createShareAssets(profile, strongest, weakest) {
       `原来我一直走不出来，不是矫情，是卡在了${profile.name}`,
       `这份测试最戳我的一句话：我该先照顾自己，再处理关系`,
     ],
+  };
+}
+
+function getResultNarrative(profile, strongest, weakest) {
+  const strongestLabel = dimensions[strongest[0]];
+  const weakestLabel = dimensions[weakest[0]];
+
+  const blindspotMap = {
+    recoverySpeed: `你不是没有感受能力，而是每次关系一受挫，都会先被情绪拖住，导致后面的判断和选择都慢半拍。`,
+    boundaryClarity: `你真正容易吃亏的地方，不是不会爱，而是太晚承认“我已经不舒服了”，于是一步步把自己让了出去。`,
+    attributionStyle: `你最容易卡住的不是事情本身，而是习惯先把问题往自己身上收，这会让你在关系里反复内耗。`,
+    supportAbility: `你已经撑了太多次，但真正拖住你的，往往是情绪来了以后没有及时调用外部支持，只能一个人硬消化。`,
+    growthTransform: `你未必不知道自己受了伤，只是还没有把这些经历真正整理成新的选择标准，所以旧模式容易重复出现。`,
+  };
+
+  const nextStepMap = {
+    recoverySpeed: `先别急着想清楚关系本身，这一周更值得做的是先固定一套“情绪落地动作”，让自己每次波动时都有地方可回。`,
+    boundaryClarity: `这阶段最值得练的不是强硬，而是更早说出那句“这让我不舒服”，把边界从心里搬到关系里。`,
+    attributionStyle: `接下来先练习把“我是不是不够好”换成“先看事实”，只要这一步稳住，你的关系感受会轻很多。`,
+    supportAbility: `现在最有效的动作不是继续扛，而是先搭一个最小支持系统，明确难受时第一时间可以找谁、做什么。`,
+    growthTransform: `先别急着开启下一段关系，把这次经历写成 3 条你以后不会再忽略的提醒，它会比硬逼自己释怀更有用。`,
+  };
+
+  return {
+    blindspot: `${profile.name}里，你的高分来自${strongestLabel}，但真正拉住你的短板更可能是${weakestLabel}。${blindspotMap[weakest[0]]}`,
+    nextStep: nextStepMap[weakest[0]],
   };
 }
 
