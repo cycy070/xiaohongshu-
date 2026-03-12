@@ -1,0 +1,16 @@
+[
+  {
+    "code": "YJ-2026-8888",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 1,
+    "active": true
+  },
+  {
+    "code": "YJ-2026-9999",
+    "plan": "进阶版",
+    "maxUses": 3,
+    "usedCount": 0,
+    "active": true
+  }
+]

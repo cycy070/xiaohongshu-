@@ -1,0 +1,10 @@
+{
+  "name": "yujian-resilience-test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "愈见 · 情感复原力测试 MVP",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  }
+}
