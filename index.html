@@ -20,7 +20,11 @@
     <div class="unlock-overlay" data-unlock-overlay>
       <div class="unlock-card">
         <div class="brand-lockup">
-          <span class="brand-mark">YJ</span>
+          <span class="brand-mark" aria-hidden="true">
+            <span class="brand-mark__ring"></span>
+            <span class="brand-mark__glyph">愈</span>
+            <span class="brand-mark__dot"></span>
+          </span>
           <div>
             <p class="brand-eyebrow">YUJIAN STUDIO</p>
             <h1>愈见</h1>
@@ -37,6 +41,11 @@
           <button class="primary-button" type="submit">验证并进入测试</button>
         </form>
         <p class="redeem-feedback" data-redeem-feedback></p>
+        <ul class="unlock-points">
+          <li>3-5 鍒嗛挓瀹屾垚</li>
+          <li>5 缁撮浄杈惧浘</li>
+          <li>闃舵鐢诲儚 + 琛屽姩寤鸿</li>
+        </ul>
         <ul class="helper-list compact">
           <li>建议复制链接到浏览器打开后再输入兑换码。</li>
           <li>如兑换失败或次数用完，请联系店铺客服补发。</li>
@@ -47,7 +56,11 @@
     <div class="page-shell">
       <header class="topbar">
         <div class="brand-lockup">
-          <span class="brand-mark">YJ</span>
+          <span class="brand-mark" aria-hidden="true">
+            <span class="brand-mark__ring"></span>
+            <span class="brand-mark__glyph">愈</span>
+            <span class="brand-mark__dot"></span>
+          </span>
           <div>
             <p class="brand-eyebrow">YUJIAN STUDIO</p>
             <h1>愈见</h1>
@@ -127,10 +140,15 @@
 
             <div class="quiz-card hidden" data-quiz-card>
               <div class="quiz-progress">
+                <div class="quiz-progress-meta">
+                  <span class="progress-group" data-progress-group></span>
+                  <span class="progress-remaining" data-progress-remaining></span>
+                </div>
                 <span data-progress-text>第 1 / 20 题</span>
                 <div class="progress-track">
                   <div class="progress-fill" data-progress-fill></div>
                 </div>
+                <p class="progress-support" data-progress-support></p>
               </div>
               <div class="question-copy">
                 <p class="question-tag" data-question-dimension></p>
@@ -148,7 +166,18 @@
                 <p class="section-tag">你的测试结果</p>
                 <h3 data-result-stage></h3>
                 <p class="result-tagline" data-result-tagline></p>
+                <p class="result-embrace" data-result-embrace></p>
                 <p data-result-summary></p>
+              </div>
+
+              <div class="result-snapshot-card">
+                <p class="mini-tag">适合截图保存</p>
+                <h4 data-result-snapshot-title></h4>
+                <p class="result-snapshot-body" data-result-snapshot-body></p>
+                <div class="result-snapshot-chips">
+                  <span data-result-snapshot-strong></span>
+                  <span data-result-snapshot-focus></span>
+                </div>
               </div>
 
               <div class="result-hero-card">

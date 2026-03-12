@@ -231,6 +231,44 @@ const questions = [
   },
 ];
 
+const quizGroups = [
+  {
+    label: "第 1 组｜情绪回稳",
+    shortLabel: "情绪回稳",
+    start: 0,
+    end: 3,
+    support: "先按最近的真实状态来选，不需要把自己表现得很坚强。",
+  },
+  {
+    label: "第 2 组｜边界感",
+    shortLabel: "边界感",
+    start: 4,
+    end: 7,
+    support: "做到这里时，如果有点刺痛感，说明你已经开始看见真正卡住的地方了。",
+  },
+  {
+    label: "第 3 组｜自我归因",
+    shortLabel: "自我归因",
+    start: 8,
+    end: 11,
+    support: "这一组更像在看你平时怎么对待自己，别急着选“更正确”的答案。",
+  },
+  {
+    label: "第 4 组｜支持系统",
+    shortLabel: "支持系统",
+    start: 12,
+    end: 15,
+    support: "已经过半了，继续往下，你会更清楚自己是怎么一个人扛住很多事的。",
+  },
+  {
+    label: "第 5 组｜成长转化",
+    shortLabel: "成长转化",
+    start: 16,
+    end: 19,
+    support: "最后一组了，看看这些经历有没有正在慢慢变成你的力量。",
+  },
+];
+
 const stageProfiles = [
   {
     max: 34,
@@ -309,8 +347,11 @@ const quizSection = document.querySelector("[data-quiz-section]");
 const unlockOverlay = document.querySelector("[data-unlock-overlay]");
 const quizCard = document.querySelector("[data-quiz-card]");
 const resultCard = document.querySelector("[data-result-card]");
+const progressGroup = document.querySelector("[data-progress-group]");
+const progressRemaining = document.querySelector("[data-progress-remaining]");
 const progressText = document.querySelector("[data-progress-text]");
 const progressFill = document.querySelector("[data-progress-fill]");
+const progressSupport = document.querySelector("[data-progress-support]");
 const questionDimension = document.querySelector("[data-question-dimension]");
 const questionTitle = document.querySelector("[data-question-title]");
 const answersContainer = document.querySelector("[data-answers]");
@@ -320,7 +361,12 @@ const startButtons = document.querySelectorAll("[data-start-test]");
 const radarCanvas = document.querySelector("[data-radar-canvas]");
 const resultStage = document.querySelector("[data-result-stage]");
 const resultTagline = document.querySelector("[data-result-tagline]");
+const resultEmbrace = document.querySelector("[data-result-embrace]");
 const resultSummary = document.querySelector("[data-result-summary]");
+const resultSnapshotTitle = document.querySelector("[data-result-snapshot-title]");
+const resultSnapshotBody = document.querySelector("[data-result-snapshot-body]");
+const resultSnapshotStrong = document.querySelector("[data-result-snapshot-strong]");
+const resultSnapshotFocus = document.querySelector("[data-result-snapshot-focus]");
 const resultPattern = document.querySelector("[data-result-pattern]");
 const resultStrength = document.querySelector("[data-result-strength]");
 const resultBlindspot = document.querySelector("[data-result-blindspot]");
@@ -335,6 +381,7 @@ const resultTitleList = document.querySelector("[data-result-title-list]");
 const shareButton = document.querySelector("[data-share-card]");
 const shareOutput = document.querySelector("[data-share-output]");
 const redeemForm = document.querySelector("[data-redeem-form]");
+const redeemInput = document.querySelector("#redeemCode");
 const redeemFeedback = document.querySelector("[data-redeem-feedback]");
 const deliveryTemplate = document.querySelector("[data-delivery-template]");
 const copyDeliveryButton = document.querySelector("[data-copy-delivery]");
@@ -342,6 +389,110 @@ const demoCode = "YJ-2026-8888";
 
 let activeRedeem = null;
 document.body.classList.add("overlay-open");
+
+function applyComfortCopy() {
+  const unlockTag = document.querySelector(".unlock-card .section-tag");
+  const unlockTitle = document.querySelector(".unlock-card h2");
+  const unlockDescription = document.querySelector(".unlock-card .hero-description");
+  const unlockLabel = document.querySelector(".unlock-card label[for='redeemCode']");
+  const unlockButton = document.querySelector(".unlock-card .primary-button");
+  const helperItems = document.querySelectorAll(".unlock-card .helper-list li");
+
+  const heroTag = document.querySelector(".hero .section-tag");
+  const heroTitle = document.querySelector(".hero h2");
+  const heroDescription = document.querySelector(".hero .hero-description");
+  const heroPrimaryButton = document.querySelector(".hero .primary-button");
+  const heroSecondaryButton = document.querySelector(".hero .secondary-button");
+
+  const redeemHeadingTag = document.querySelector("#redeem .section-heading .section-tag");
+  const redeemHeadingTitle = document.querySelector("#redeem .section-heading h3");
+  const redeemHeadingBody = document.querySelector("#redeem .section-heading p:last-child");
+  const redeemCardTag = document.querySelector(".redeem-card .mini-tag");
+  const redeemCardTitle = document.querySelector(".redeem-card h3");
+  const redeemCardItems = document.querySelectorAll(".redeem-card .helper-list li");
+  const deliveryTag = document.querySelector(".delivery-card .mini-tag");
+  const deliveryTitle = document.querySelector(".delivery-card h3");
+  const deliveryItems = document.querySelectorAll(".delivery-card .helper-list li");
+  const deliveryNote = document.querySelector(".delivery-card .helper-note");
+
+  if (unlockTag) unlockTag.textContent = "兑换码验证";
+  if (unlockTitle) unlockTitle.textContent = "请输入兑换码";
+  if (unlockDescription) {
+    unlockDescription.textContent = "这是已购用户专属入口。输入兑换码后，我们就陪你慢慢看清这段关系里的卡点与恢复方式。";
+    unlockDescription.classList.add("soft");
+  }
+  if (unlockLabel) unlockLabel.textContent = "兑换码";
+  if (unlockButton) unlockButton.textContent = "验证并进入测试";
+  if (helperItems[0]) helperItems[0].textContent = "建议复制链接到浏览器打开后，再输入兑换码。";
+  if (helperItems[1]) helperItems[1].textContent = "如兑换失败或次数用完，请联系店铺客服补发。";
+
+  if (heroTag) heroTag.textContent = "已购后使用";
+  if (heroTitle) heroTitle.textContent = "输入兑换码，开始你的情感复原力测试。";
+  if (heroDescription) {
+    heroDescription.textContent = "这不是一份冷冰冰的测试表，而是一段帮你重新看懂自己关系恢复方式的小旅程。共 20 道题，约 3-5 分钟完成。";
+    heroDescription.classList.add("soft");
+  }
+  if (heroPrimaryButton) heroPrimaryButton.textContent = "立即输入兑换码";
+  if (heroSecondaryButton) heroSecondaryButton.textContent = "查看说明";
+
+  if (redeemHeadingTag) redeemHeadingTag.textContent = "兑换码入口";
+  if (redeemHeadingTitle) redeemHeadingTitle.textContent = "先验证兑换码，再开始测试。";
+  if (redeemHeadingBody) redeemHeadingBody.textContent = "如果你是从小红书下单后打开这个页面，把收到的兑换码填在这里，就可以进入完整测试。";
+  if (redeemCardTag) redeemCardTag.textContent = "使用路径";
+  if (redeemCardTitle) redeemCardTitle.textContent = "这一页只做一件事：帮你顺利进入测试。";
+  if (redeemCardItems[0]) redeemCardItems[0].textContent = "进入页面后，先输入兑换码。";
+  if (redeemCardItems[1]) redeemCardItems[1].textContent = "验证成功后，系统才会解锁测试。";
+  if (redeemCardItems[2]) redeemCardItems[2].textContent = "没有兑换码时，暂时无法进入题目页。";
+  if (deliveryTag) deliveryTag.textContent = "使用说明";
+  if (deliveryTitle) deliveryTitle.textContent = "手机上这样用会更顺。";
+  if (deliveryItems[0]) deliveryItems[0].textContent = "复制链接到浏览器打开，不要直接在聊天窗口里使用。";
+  if (deliveryItems[1]) deliveryItems[1].textContent = "输入兑换码后，完成 20 道题就可以查看结果。";
+  if (deliveryItems[2]) deliveryItems[2].textContent = "建议按最近一段时间的真实状态作答。";
+  if (deliveryNote) deliveryNote.textContent = "如果兑换异常或页面打不开，直接联系小红书店铺客服处理就可以。";
+}
+
+function getQuizGroup(index) {
+  return quizGroups.find((group) => index >= group.start && index <= group.end) || quizGroups[0];
+}
+
+function setRedeemState(status, message) {
+  redeemForm.classList.remove("is-loading", "is-success", "is-error");
+  redeemFeedback.classList.remove("is-loading", "is-success", "is-error");
+
+  if (status) {
+    redeemForm.classList.add(`is-${status}`);
+    redeemFeedback.classList.add(`is-${status}`);
+  }
+
+  redeemFeedback.textContent = message || "";
+}
+
+function syncRedeemStateFromMessage(message) {
+  const normalized = String(message || "");
+
+  if (!normalized) {
+    redeemForm.classList.remove("is-loading", "is-success", "is-error");
+    redeemFeedback.classList.remove("is-loading", "is-success", "is-error");
+    return;
+  }
+
+  if (normalized.includes("成功") || normalized.includes("解锁")) {
+    setRedeemState("success", normalized);
+    return;
+  }
+
+  if (normalized.includes("正在") || normalized.includes("稍等")) {
+    setRedeemState("loading", normalized);
+    return;
+  }
+
+  if (normalized.includes("失败") || normalized.includes("无效") || normalized.includes("先输入") || normalized.includes("仅支持")) {
+    setRedeemState("error", normalized);
+    return;
+  }
+
+  setRedeemState("", normalized);
+}
 
 function unlockQuiz() {
   quizSection?.classList.remove("hidden");
@@ -351,8 +502,13 @@ function unlockQuiz() {
 
 function renderQuestion() {
   const question = questions[state.currentQuestionIndex];
+  const group = getQuizGroup(state.currentQuestionIndex);
+  const remaining = questions.length - (state.currentQuestionIndex + 1);
   progressText.textContent = `第 ${state.currentQuestionIndex + 1} / ${questions.length} 题`;
+  progressGroup.textContent = group.label;
+  progressRemaining.textContent = remaining === 0 ? "最后 1 题" : `还剩 ${remaining} 题`;
   progressFill.style.width = `${((state.currentQuestionIndex + 1) / questions.length) * 100}%`;
+  progressSupport.textContent = group.support;
   questionDimension.textContent = dimensions[question.dimension];
   questionTitle.textContent = question.title;
   prevButton.disabled = state.currentQuestionIndex === 0;
@@ -434,6 +590,27 @@ function getDimensionInsight(key, value) {
   return copyMap[key][band];
 }
 
+function getResultEmbrace(profile, weakest) {
+  const embraceMap = {
+    recoverySpeed: "你不是走不出来，只是每次情绪翻涌时，都还缺一个能稳稳接住自己的方式。",
+    boundaryClarity: "你不是不会拒绝，只是太习惯先顾全关系，最后把自己放到了后面。",
+    attributionStyle: "你不是太敏感，而是遇到波动时，总会下意识先反过来责怪自己。",
+    supportAbility: "你不是不够坚强，你只是一个人撑了太久，还没习惯把难过交给别人一起分担。",
+    growthTransform: "你不是没有成长，只是有些经历还停留在痛里，暂时还没被整理成真正保护你的经验。",
+  };
+
+  return `${profile.name} 这一阶段更想让你先记住：${embraceMap[weakest[0]]}`;
+}
+
+function getSnapshotCopy(profile, strongest, weakest) {
+  return {
+    title: "现在的你，最需要的不是更懂事，而是更会照顾自己。",
+    body: `${profile.name} 说明你已经有一部分力量在慢慢长出来了。真正值得继续照顾的，是别再让 ${dimensions[weakest[0]]} 反复拖住你。`,
+    strong: `当前优势：${dimensions[strongest[0]]}`,
+    focus: `接下来更适合先照顾：${dimensions[weakest[0]]}`,
+  };
+}
+
 function renderResult() {
   const scores = getScores();
   const total = Object.values(scores).reduce((sum, value) => sum + value, 0);
@@ -448,7 +625,13 @@ function renderResult() {
 
   resultStage.textContent = `${profile.name} | 总分 ${total} / 80`;
   resultTagline.textContent = profile.tagline;
+  resultEmbrace.textContent = getResultEmbrace(profile, weakest);
   resultSummary.textContent = profile.summary;
+  const snapshot = getSnapshotCopy(profile, strongest, weakest);
+  resultSnapshotTitle.textContent = snapshot.title;
+  resultSnapshotBody.textContent = snapshot.body;
+  resultSnapshotStrong.textContent = snapshot.strong;
+  resultSnapshotFocus.textContent = snapshot.focus;
   resultPattern.textContent = profile.pattern;
   resultStrength.textContent = profile.strength;
   const narrative = getResultNarrative(profile, strongest, weakest);
@@ -747,6 +930,24 @@ async function saveSubmission(result) {
   } catch {
     // Ignore submission failures in this MVP.
   }
+}
+
+applyComfortCopy();
+
+if (redeemInput && document.body.classList.contains("overlay-open")) {
+  window.setTimeout(() => redeemInput.focus(), 120);
+}
+
+if (redeemFeedback) {
+  const feedbackObserver = new MutationObserver(() => {
+    syncRedeemStateFromMessage(redeemFeedback.textContent);
+  });
+
+  feedbackObserver.observe(redeemFeedback, {
+    childList: true,
+    characterData: true,
+    subtree: true,
+  });
 }
 
 startButtons.forEach((button) => button.addEventListener("click", startQuiz));
