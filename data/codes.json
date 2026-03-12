@@ -1,5 +1,485 @@
 [
   {
+    "code": "YJ-2026-THSS9P",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-PPT3CG",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-YEA8SY",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-WM425S",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-8CVBX4",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-7HVR2M",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-U94T35",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-57SZMH",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-3RU5PY",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-DQ4BFL",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-FQ9GLL",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-59ZHHL",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-K4XDTC",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-6U5GRL",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-3GGEZD",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-LTCEWS",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-M76CZM",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-GLUGWF",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-HQECQ4",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-KJZ2LM",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-NWFVRG",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-P5MDDY",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-JFLP6X",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-TY3AAE",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-R2A94C",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-EXL5YH",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-ULR6GP",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-YCNQRD",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-PC32D5",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-EU9YFH",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-LWE763",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-YCMNYN",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-XR8ZKN",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-KEL5KT",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-XQTVL2",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-7SDFER",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-5AKTZ4",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-QCLC3S",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-GCRE3Q",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-K6SEUN",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-XXZZD7",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-28M8F3",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-35YC4Q",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-NA65D7",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-Q7Y6J7",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-BHRB3U",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-Z8HECK",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-5P6VP2",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-QEXXKP",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-5VBXZN",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.629Z"
+  },
+  {
+    "code": "YJ-2026-BGLHM4",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.465Z"
+  },
+  {
+    "code": "YJ-2026-EZSYFW",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.465Z"
+  },
+  {
+    "code": "YJ-2026-EBCP4V",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.465Z"
+  },
+  {
+    "code": "YJ-2026-4NW5UY",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.465Z"
+  },
+  {
+    "code": "YJ-2026-XL5NYQ",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.465Z"
+  },
+  {
+    "code": "YJ-2026-SVGK6R",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.465Z"
+  },
+  {
+    "code": "YJ-2026-R7PVHN",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.465Z"
+  },
+  {
+    "code": "YJ-2026-SNLVDY",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.465Z"
+  },
+  {
+    "code": "YJ-2026-DNU6PV",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.465Z"
+  },
+  {
+    "code": "YJ-2026-5HHWDD",
+    "plan": "完整版",
+    "maxUses": 5,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-12T15:39:58.465Z"
+  },
+  {
     "code": "YJ-2026-S2JS7M",
     "plan": "完整版",
     "maxUses": 5,
