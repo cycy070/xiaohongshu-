@@ -286,7 +286,9 @@ p {
 .faq-grid,
 .testimonial-grid,
 .package-grid,
-.dimension-grid {
+.dimension-grid,
+.scene-grid,
+.report-breakdown {
   display: grid;
   gap: 18px;
 }
@@ -335,7 +337,9 @@ p {
 .value-card,
 .deliverable-card,
 .timeline-step,
-.faq-card {
+.faq-card,
+.scene-card,
+.breakdown-card {
   border-radius: 26px;
   padding: 26px;
   background: rgba(255, 250, 246, 0.82);
@@ -346,8 +350,33 @@ p {
 .value-card h3,
 .deliverable-card h3,
 .timeline-step h3,
-.faq-card h3 {
+.faq-card h3,
+.scene-card h3,
+.breakdown-card h3 {
   margin-top: 10px;
+}
+
+.scene-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.scene-card span {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(191, 125, 104, 0.12);
+  color: var(--accent-deep);
+}
+
+.report-breakdown {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.breakdown-card {
+  background: linear-gradient(180deg, rgba(255, 250, 246, 0.92), rgba(244, 229, 220, 0.72));
 }
 
 .showcase {
@@ -494,6 +523,25 @@ blockquote {
   margin: 0;
   padding-left: 18px;
   line-height: 1.9;
+}
+
+.cta-section {
+  background:
+    radial-gradient(circle at left top, rgba(191, 125, 104, 0.2), transparent 30%),
+    rgba(255, 250, 246, 0.7);
+}
+
+.cta-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  gap: 24px;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.cta-actions {
+  display: grid;
+  gap: 12px;
 }
 
 .moodboard article {
@@ -735,7 +783,10 @@ input {
   .faq-grid,
   .testimonial-grid,
   .package-grid,
-  .dimension-grid {
+  .dimension-grid,
+  .scene-grid,
+  .report-breakdown,
+  .cta-panel {
     grid-template-columns: 1fr;
   }
 
