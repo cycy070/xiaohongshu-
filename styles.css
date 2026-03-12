@@ -31,6 +31,10 @@ body {
     linear-gradient(180deg, #fbf5f1 0%, var(--bg) 100%);
 }
 
+body.overlay-open {
+  overflow: hidden;
+}
+
 button,
 input,
 textarea {
@@ -47,6 +51,36 @@ li {
   width: min(calc(100% - 24px), var(--max-width));
   margin: 0 auto;
   padding: 14px 0 48px;
+}
+
+.unlock-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(246, 239, 233, 0.82);
+  backdrop-filter: blur(10px);
+}
+
+.unlock-card {
+  width: min(100%, 460px);
+  padding: 24px 20px;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  background: rgba(255, 250, 246, 0.96);
+  box-shadow: 0 24px 60px rgba(100, 67, 45, 0.16);
+}
+
+.unlock-card .brand-lockup {
+  margin-bottom: 18px;
+}
+
+.unlock-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
 }
 
 .topbar {

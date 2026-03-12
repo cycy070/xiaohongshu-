@@ -306,6 +306,7 @@ const state = {
 
 const quizIntro = document.querySelector("[data-quiz-intro]");
 const quizSection = document.querySelector("[data-quiz-section]");
+const unlockOverlay = document.querySelector("[data-unlock-overlay]");
 const quizCard = document.querySelector("[data-quiz-card]");
 const resultCard = document.querySelector("[data-result-card]");
 const progressText = document.querySelector("[data-progress-text]");
@@ -340,9 +341,12 @@ const copyDeliveryButton = document.querySelector("[data-copy-delivery]");
 const demoCode = "YJ-2026-8888";
 
 let activeRedeem = null;
+document.body.classList.add("overlay-open");
 
 function unlockQuiz() {
   quizSection?.classList.remove("hidden");
+  unlockOverlay?.classList.add("hidden");
+  document.body.classList.remove("overlay-open");
 }
 
 function renderQuestion() {
