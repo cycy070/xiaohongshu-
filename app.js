@@ -476,22 +476,26 @@ function syncRedeemStateFromMessage(message) {
     return;
   }
 
+  redeemForm.classList.remove("is-loading", "is-success", "is-error");
+  redeemFeedback.classList.remove("is-loading", "is-success", "is-error");
+
   if (normalized.includes("成功") || normalized.includes("解锁")) {
-    setRedeemState("success", normalized);
+    redeemForm.classList.add("is-success");
+    redeemFeedback.classList.add("is-success");
     return;
   }
 
   if (normalized.includes("正在") || normalized.includes("稍等")) {
-    setRedeemState("loading", normalized);
+    redeemForm.classList.add("is-loading");
+    redeemFeedback.classList.add("is-loading");
     return;
   }
 
   if (normalized.includes("失败") || normalized.includes("无效") || normalized.includes("先输入") || normalized.includes("仅支持")) {
-    setRedeemState("error", normalized);
+    redeemForm.classList.add("is-error");
+    redeemFeedback.classList.add("is-error");
     return;
   }
-
-  setRedeemState("", normalized);
 }
 
 function unlockQuiz() {
