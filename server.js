@@ -198,8 +198,16 @@ function serveStatic(requestPath, response) {
     }
 
     const extension = path.extname(filePath).toLowerCase();
+    const cacheControl =
+      extension === ".html" || extension === ".css" || extension === ".js" || extension === ".json"
+        ? "no-store, no-cache, must-revalidate"
+        : "public, max-age=86400";
+
     response.writeHead(200, {
       "Content-Type": mimeTypes[extension] || "application/octet-stream",
+      "Cache-Control": cacheControl,
+      Pragma: "no-cache",
+      Expires: "0",
     });
     response.end(content);
   });
