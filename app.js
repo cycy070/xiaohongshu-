@@ -751,11 +751,17 @@ function drawRadar(scores) {
   const ctx = radarCanvas.getContext("2d");
   const labels = Object.values(dimensions);
   const values = Object.keys(dimensions).map((key) => scores[key]);
+  const dpr = window.devicePixelRatio || 1;
+  const size = Math.max(360, Math.round((radarCanvas.clientWidth || 320) * dpr));
+  radarCanvas.width = size;
+  radarCanvas.height = size;
+
   const centerX = radarCanvas.width / 2;
   const centerY = radarCanvas.height / 2;
-  const radius = 120;
+  const radius = Math.max(96, size / 2 - 72);
   const maxScore = 16;
   ctx.clearRect(0, 0, radarCanvas.width, radarCanvas.height);
+  ctx.textBaseline = "middle";
 
   for (let level = 1; level <= 4; level += 1) {
     const levelRadius = (radius / 4) * level;
@@ -786,12 +792,19 @@ function drawRadar(scores) {
     ctx.strokeStyle = "rgba(96, 68, 50, 0.12)";
     ctx.stroke();
 
-    const textX = centerX + Math.cos(angle) * (radius + 26);
-    const textY = centerY + Math.sin(angle) * (radius + 26);
+    const textX = centerX + Math.cos(angle) * (radius + 34);
+    const textY = centerY + Math.sin(angle) * (radius + 34);
     ctx.fillStyle = "#7a6659";
-    ctx.font = "14px 'Noto Serif SC'";
+    ctx.font = `${Math.max(12, Math.round(size / 28))}px 'Noto Serif SC'`;
     ctx.textAlign = textX < centerX - 10 ? "right" : textX > centerX + 10 ? "left" : "center";
-    ctx.fillText(label, textX, textY);
+    const breakIndex = Math.ceil(label.length / 2);
+    const segments = label.length > 4 ? [label.slice(0, breakIndex), label.slice(breakIndex)] : [label];
+    const lineHeight = Math.max(16, Math.round(size / 20));
+    const startY = textY - ((segments.length - 1) * lineHeight) / 2;
+
+    segments.forEach((segment, segmentIndex) => {
+      ctx.fillText(segment, textX, startY + segmentIndex * lineHeight);
+    });
   });
 
   ctx.beginPath();

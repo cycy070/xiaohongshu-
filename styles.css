@@ -70,11 +70,13 @@ li {
   position: relative;
   overflow: hidden;
   width: min(100%, 460px);
+  max-height: min(92dvh, 860px);
   padding: 24px 20px 22px;
   border-radius: 30px;
   border: 1px solid rgba(96, 68, 50, 0.1);
   background: linear-gradient(160deg, rgba(255, 250, 246, 0.98), rgba(249, 239, 233, 0.92));
   box-shadow: 0 28px 70px rgba(100, 67, 45, 0.16);
+  overflow-y: auto;
 }
 
 .unlock-card .brand-lockup {
@@ -802,13 +804,14 @@ canvas {
   }
 
   .unlock-overlay {
-    align-items: end;
-    padding: 12px;
+    align-items: center;
+    padding: 12px 10px calc(12px + env(safe-area-inset-bottom));
   }
 
   .unlock-card {
     width: 100%;
-    padding: 22px 18px 18px;
+    max-height: calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    padding: 18px 16px 16px;
     border-radius: 28px 28px 22px 22px;
   }
 
@@ -842,8 +845,8 @@ canvas {
   }
 
   h2 {
-    font-size: clamp(2rem, 12vw, 3rem);
-    line-height: 1.02;
+    font-size: clamp(1.65rem, 10.2vw, 2.55rem);
+    line-height: 1.08;
   }
 
   .hero,
@@ -871,8 +874,8 @@ canvas {
   }
 
   input {
-    padding: 16px 16px;
-    font-size: 1rem;
+    padding: 14px 15px;
+    font-size: 0.98rem;
     border-radius: 18px;
   }
 
@@ -880,8 +883,40 @@ canvas {
   .secondary-button,
   .ghost-button {
     width: 100%;
-    min-height: 52px;
+    min-height: 48px;
     justify-content: center;
+  }
+
+  .unlock-card .brand-lockup {
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .brand-mark {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+  }
+
+  .brand-mark__ring {
+    inset: 7px;
+    border-radius: 12px;
+  }
+
+  .brand-mark__glyph {
+    font-size: 1.3rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-description,
+  .unlock-card .hero-description,
+  .helper-list,
+  .helper-note {
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
 
   .quiz-progress {
@@ -915,7 +950,7 @@ canvas {
   }
 
   canvas {
-    max-width: 280px;
+    max-width: 290px;
   }
 
   .mobile-action-bar {
