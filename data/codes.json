@@ -1,5 +1,13 @@
 [
   {
+    "code": "YJ-2026-77VU7V",
+    "plan": "完整版",
+    "maxUses": 20,
+    "usedCount": 0,
+    "active": true,
+    "createdAt": "2026-03-16T08:02:32.220Z"
+  },
+  {
     "code": "YJ-2026-7PLNY7",
     "plan": "完整版",
     "maxUses": 5,
